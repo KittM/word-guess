@@ -13,18 +13,26 @@
   </head>
   <body>
     <div class="container">
-        <nav class=" navbar navbar-light bg-light" >
-        <h1>Guess the National Park</h1>
-      </nav>
+        <nav class="navbar navbar-light bg-light">
+          <h1>Guess the National Park</h1>
+        </nav>
+
         <div class="row">
-        <div class="col-sm-6"id="answer"></div>
+          <div class="col"id="answer"></div>
         </div>
-        <div id="answerArray"> _ _ _ _ _ _ _</div>
-        <div id="lettersGuessed"></div>
-        <div> Wins: <span id="wins"></span></div>
-        <div> Losses: <span id="losses"></span></div>
-        <div> Remaining Guesses: <span id="remainingGuesses"></span></div>
-        <div> Misktakes Made: <span id="mistakesMade"></span></div>
+
+        <div class="row">
+          <div id="answerArray" class="col-8"> _ _ _ _ _ _</div>
+        </div>
+
+          <div class="row">
+            <div id="lettersGuessed" class="col-8"></div>
+            <div class="col-8"> Wins: <span id="wins"></span></div>
+            <div class="col-8"> Losses: <span id="losses"></span></div>
+            <div class="col-8"> Remaining Guesses: <span id="remainingGuesses"></span></div>
+            <div class="col-8"> Misktakes Made: <span id="mistakesMade"></span></div>
+          </div>
+          
       </div>
 
     <!-- Optional JavaScript -->

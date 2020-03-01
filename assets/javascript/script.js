@@ -65,11 +65,16 @@ $(document).ready(function () {
                                         if (currentWord[j] === userGuess) {
                                                 answerArray[j] = userGuess;
                                                 remainingLetters--
+                                                if (remainingLetters !== 0) {
+                                                        alert("No Hiking For You!");
+                                                        initializeGame();
+                                                }
                                                 //user wins - game reset
                                                 if (remainingLetters === 0) {
                                                         wins++
                                                         initializeGame();
                                                 }
+                                                
                                         }
                                 }
                         }
