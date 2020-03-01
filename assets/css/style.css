@@ -1,0 +1,30 @@
+
+* {
+font-family: 'Caladea',sans-serif ;
+  
+}
+
+h1 {
+     font-size: 32px;
+     font-weight: 700;
+     font-family: 'Caladea',sans-serif ;
+     color: brown;
+     text-align: center;
+
+}
+
+nav {
+     width: 100%;
+     font-family: 'Caladea',sans-serif ;
+     font-size: 14px;
+     color: #747c83;
+     text-align: center;
+}
+
+div {
+     width: 100%;
+     font-family: 'Caladea',sans-serif ;
+     font-size: 14px;
+     color: #747c83;
+
+}
