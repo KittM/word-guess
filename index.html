@@ -12,28 +12,46 @@
     <title>National Park Word Guess</title>
   </head>
   <body>
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
-          <h1>Guess the National Park</h1>
-        </nav>
-
-        <div class="row">
-          <div class="col"id="answer"></div>
-        </div>
-
-        <div class="row">
-          <div id="answerArray" class="col-8"> _ _ _ _ _ _</div>
-        </div>
-
+        <header class="container-fluid">
           <div class="row">
-            <div id="lettersGuessed" class="col-8"></div>
-            <div class="col-8"> Wins: <span id="wins"></span></div>
-            <div class="col-8"> Losses: <span id="losses"></span></div>
-            <div class="col-8"> Remaining Guesses: <span id="remainingGuesses"></span></div>
-            <div class="col-8"> Misktakes Made: <span id="mistakesMade"></span></div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+              <h1>National Park Guessing Game</h1>
+            </div>
+          <div class="col-sm-3"></div>
           </div>
-          
-      </div>
+        </header>
+        <section class="container-fluid">
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-8"id="answer"></div>
+              <div class="col-sm-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div id="answerArray" class="col-sm-8"> _ _ _ _ _ _</div>
+              <div class="col-sm-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div id="lettersGuessed" class="col-sm-8"></div>
+              <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-8">
+                <div> Remaining Guesses: <span id="remainingGuesses"></span></div>
+                <div> Misktakes Made: <span id="mistakesMade"></span></div>
+                <div> Wins: <span id="wins"></span></div>
+                <div> Losses: <span id="losses"></span></div>
+              </div>
+              <div class="col-sm-2"></div>
+              
+            </div>
+              
+      </section>
 
     <!-- Optional JavaScript -->
     <script src="assets/javascript/script.js"></script>
