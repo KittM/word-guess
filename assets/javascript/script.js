@@ -1,77 +1,74 @@
-
- // global trackers
+$(document).ready(function () {
         
- var wins = 0; 
- var losses = 0;
- var remainingGuesses =12;
- var mistakesMade=0;
- var lettersGuessed = [];
- var answerArray = [];
- var remainingLetters = 0;
- var currentWord = [];
+// global variables
+        
+        var wins = 0; 
+        var losses = 0;
+        var remainingGuesses = 12;
+        var mistakesMade = 0;
+        var remainingLetters = 0;
+
+        var lettersGuessed = [];
+        var answerArray = [];
+        var currentWord = [];
  
  
- var wordBank = [
-         "yosemite",
-         "olympic",
-         "zion",
-         "yellowstone",
-         "moajve",
-         "glacier",
-         "sequoia",
- ];
-  
-        function initializeGame( ) {
-                lettersGuessed = [ ];
-                answerArray = [ ];
-                remainingLetters = 0;
-                currentWord = wordBank[Math.floor(Math.random() * (wordBank.length))];
-                                
-                        
-                for (var i = 0; i < currentWord.length; i++) {
-                         answerArray.push("_");
-                         console.log(currentWord);
+        var wordBank = [
+                "yosemite",
+                "olympic",
+                "zion",
+                "yellowstone",
+                "mojave",
+                "glacier",
+                "sequoia"
+                ];
+
+        function initializeGame() {
+                        lettersGuessed = [];
+                        answerArray = [];
+                        remainingLetters = 0;
+                        currentWord = wordBank[Math.floor(Math.random() * (wordBank.length))];
+
+////start game
+initializeGame();
+
+////prevent users from reselecting characters
+
+        for (var k = 0; k < lettersGuessed.length; k++) {
+                if (lettersGuessed[k] === userGuess) {
+                alert('You already picked that!')
                 }
-                        remainingLetters = currentWord.length;
-                        $("#answer").text(answerArray);
-                };
-                
-                initializeGame(); 
 
-                $(document).ready();
-                        $(document).on('keypress' , function(event) {
-                                var userGuess = event.key.toLowercase();
-                                console.log('user guess', userGuess)
-                                if (remainingGuesses > 0) {
-
+//event listener
+                $(document).on('keypress', function (event) {
+                        var userGuess = eventKey.toLowercase();
+                        console.log('user guess', userGuess)
+                        if (remainingGuesses > 0) { //if remaining asnsers are greater than zero continue to...
                                 lettersGuessed.push(userGuess);
-                                        $("#lettersGuessed").text(lettersGuessed);
-                                        
-                                        
+                                $("#lettersGuessed").text(lettersGuessed);
+                                //take the user selected letter and included in UserGuess array
                                 currentWord.indexOf(userGuess);
-                                        if (currentWord.indexOf(userGuess) !== -1) {
-                                        
-                                ['yosemite']
-                                                'y' - 0, 'o' - 0, 's' - 0, 'e' - 0, 'm' - 0, 'i' - 0, 't' - 0, 'e' - 0,
-                                                
-                                        for  (var j = 0; j < currentWord.length; j++) {
-                                                if (currentWord[j] === userGuess) {
-                                                        answerArray[j] = userGuess;
-                                                        remainingLetters--
-                                                        if (remainingLetters === 0 ) { 
-                                                wins++
-                                                initialiazeGame();
+                                //compare the current word to the position of the userGuess
+                                if (currentWord.indexOf(userGuess) !== -1) {
+                                        //if the index of the user guess is not =1 than repeat for the length of the current word
+                                        for (var i = 0; i < currentWord.length; i++) {
+                                                answerArray.push("_"); //for letters assigned 0 value push to answer array
+                                                console.log(currentWord);
                                         }
+                                        remainingLetters = currentWord.length;
+                                        $("#answer").text(answerArray);
                                 }
-                        }
-                                        } else {
-                                                mistakesMade++
-                                                reaminingGuesses--;        
+
+                                for (var j = 0; j < currentWord.length; j++); {
+                                        if (currentWord[j] === userGuess) {
+                                                answerArray[j] = userGuess;
+                                                remainingLetters--
+                                                //user wins - game reset
+                                                if (remainingLetters === 0) {
+                                                        wins++
+                                                        initializeGame();
+                                                }
                                         }
                                 }
                         }
                 
-               
-        }];
-         
- 
